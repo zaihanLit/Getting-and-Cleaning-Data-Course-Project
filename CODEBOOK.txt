@@ -1,0 +1,323 @@
+Getting and Cleaning Data Course Project: Code Book
+
+This data set is the result of the data analysis in Getting and Cleaning Data Course Project. The Project got the training and the test sets collected from the accelerometers from the Samsung Galaxy S smartphone and did the followings:
+1. Merging the training and the test sets to create one data set.
+2. Extracting only the measurements on the mean and standard deviation for each measurement.
+3. Using descriptive activity names to name the activities in the data set
+4. Appropriately labeling the data set with descriptive variable names.
+5. From the data set in step 4, creating a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+The variables selected for this data set come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean: Mean value
+std: Standard deviation
+
+The data set contains the average of each variable for each activity and each subject.
+
+
+subjectID 
+	the ID of subject
+	integer
+		1 .. 30 
+
+activity
+	the activity of subject
+	factor
+		WALKING
+		WALKING_UPSTAIRS
+		WALKING_DOWNSTAIRS
+		SITTING
+		STANDING
+		LAYING
+	 
+tBodyAccmeanX 
+	the mean of tBodyAcc-X
+	numeric
+
+tBodyAccmeanY 
+	the mean of tBodyAcc-Y
+	numeric
+
+tBodyAccmeanZ 
+	the mean of tBodyAcc-Z
+	numeric
+
+tBodyAccstdX 
+	the standard deviation of tBodyAcc-X
+	numeric
+
+tBodyAccstdY 
+	the standard deviation of tBodyAcc-Y
+	numeric
+
+tBodyAccstdZ 
+	the standard deviation of tBodyAcc-Z
+	numeric
+
+tGravityAccmeanX 
+	the mean of tGravityAcc-X
+	numeric
+
+tGravityAccmeanY 
+	the mean of tGravityAcc-Y
+	numeric
+
+tGravityAccmeanZ 
+	the mean of tGravityAcc-Z
+	numeric
+
+tGravityAccstdX 
+	the standard deviation of tGravityAcc-X
+	numeric
+
+tGravityAccstdY 
+	the standard deviation of tGravityAcc-Y
+	numeric
+
+tGravityAccstdZ 
+	the standard deviation of tGravityAcc-Z
+	numeric
+
+tBodyAccJerkmeanX 
+	the mean of tBodyAccJerk-X
+	numeric
+
+tBodyAccJerkmeanY 
+	the mean of tBodyAccJerk-Y
+	numeric
+
+tBodyAccJerkmeanZ 
+	the mean of tBodyAccJerk-Z
+	numeric
+
+tBodyAccJerkstdX 
+	the standard deviation of tBodyAccJerk-X
+	numeric
+
+tBodyAccJerkstdY 
+	the standard deviation of tBodyAccJerk-Y
+	numeric
+
+tBodyAccJerkstdZ 
+	the standard deviation of tBodyAccJerk-Z
+	numeric
+
+tBodyGyromeanX 
+	the mean of tBodyGyro-X
+	numeric
+
+tBodyGyromeanY 
+	the mean of tBodyGyro-Y
+	numeric
+
+tBodyGyromeanZ 
+	the mean of tBodyGyro-Z
+	numeric
+
+tBodyGyrostdX 
+	the standard deviation of tBodyGyro-X
+	numeric
+
+tBodyGyrostdY 
+	the standard deviation of tBodyGyro-Y
+	numeric
+
+tBodyGyrostdZ 
+	the standard deviation of tBodyGyro-Z 
+	numeric
+
+tBodyGyroJerkmeanX 
+	the mean of tBodyGyroJerk-X
+	numeric
+
+tBodyGyroJerkmeanY 
+	the mean of tBodyGyroJerk-Y
+	numeric
+
+tBodyGyroJerkmeanZ 
+	the mean of tBodyGyroJerk-Z
+	numeric
+
+tBodyGyroJerkstdX 
+	the standard deviation of tBodyGyroJerk-X
+	numeric
+
+tBodyGyroJerkstdY 
+	the standard deviation of tBodyGyroJerk-Y
+	numeric
+
+tBodyGyroJerkstdZ 
+	the standard deviation of tBodyGyroJerk-Z
+	numeric
+
+tBodyAccMagmean 
+	the mean of tBodyAccMag
+	numeric
+
+tBodyAccMagstd 
+	the standard deviation of tBodyAccMag
+	numeric
+
+tGravityAccMagmean 
+	the mean of tGravityAccMag
+	numeric
+
+tGravityAccMagstd 
+	the standard deviation of tGravityAccMag
+	numeric
+
+tBodyAccJerkMagmean 
+	the mean of tBodyAccJerkMag
+	numeric
+
+tBodyAccJerkMagstd 
+	the standard deviation of tBodyAccJerkMag
+	numeric
+
+tBodyGyroMagmean 
+	the mean of tBodyGyroMag
+	numeric
+
+tBodyGyroMagstd 
+	the standard deviation of tBodyGyroMag
+	numeric
+
+tBodyGyroJerkMagmean 
+	the mean of tBodyGyroJerkMag
+	numeric
+
+tBodyGyroJerkMagstd 
+	the standard deviation of tBodyGyroJerkMag
+	numeric
+
+fBodyAccmeanX 
+	the mean of fBodyAcc-X
+	numeric
+
+fBodyAccmeanY 
+	the mean of fBodyAcc-Y
+	numeric
+
+fBodyAccmeanZ 
+	the mean of fBodyAcc-Z
+	numeric
+
+fBodyAccstdX 
+	the standard deviation of fBodyAcc-X
+	numeric
+
+fBodyAccstdY 
+	the standard deviation of fBodyAcc-Y
+	numeric
+
+fBodyAccstdZ 
+	the standard deviation of fBodyAcc-Z 
+	numeric
+
+fBodyAccJerkmeanX 
+	the mean of fBodyAccJerk-X
+	numeric
+
+fBodyAccJerkmeanY 
+	the mean of fBodyAccJerk-Y
+	numeric
+
+fBodyAccJerkmeanZ 
+	the mean of fBodyAccJerk-Z
+	numeric
+
+fBodyAccJerkstdX 
+	the standard deviation of fBodyAccJerk-X
+	numeric
+
+fBodyAccJerkstdY 
+	the standard deviation of fBodyAccJerk-Y
+	numeric
+
+fBodyAccJerkstdZ 
+	the standard deviation of fBodyAccJerk-Z
+	numeric
+
+fBodyGyromeanX 
+	the mean of fBodyGyro-X
+	numeric
+
+fBodyGyromeanY 
+	the mean of fBodyGyro-Y
+	numeric
+
+fBodyGyromeanZ 
+	the mean of fBodyGyro-Z
+	numeric
+
+fBodyGyrostdX 
+	the standard deviation of fBodyGyro-X
+	numeric
+
+fBodyGyrostdY 
+	the standard deviation of fBodyGyro-Y
+	numeric
+
+fBodyGyrostdZ 
+	the standard deviation of fBodyGyro-Z
+	numeric
+
+fBodyAccMagmean 
+	the mean of fBodyAccMag
+	numeric
+
+fBodyAccMagstd 
+	the standard deviation of fBodyAccMag
+	numeric
+
+fBodyBodyAccJerkMagmean 
+	the mean of fBodyBodyAccJerkMag
+	numeric
+
+fBodyBodyAccJerkMagstd 
+	the standard deviation of fBodyBodyAccJerkMag
+	numeric
+
+fBodyBodyGyroMagmean 
+	the mean of fBodyBodyGyroMag
+	numeric
+
+fBodyBodyGyroMagstd 
+	the standard deviation of fBodyBodyGyroMag
+	numeric
+
+fBodyBodyGyroJerkMagmean 
+	the mean of fBodyBodyGyroJerkMag
+	numeric
+
+fBodyBodyGyroJerkMagstd
+	the standard deviation of fBodyBodyGyroJerkMag
+	numeric
+
